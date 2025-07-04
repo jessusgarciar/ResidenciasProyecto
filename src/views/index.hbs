@@ -1,0 +1,39 @@
+<main class="mt-5 mb-5">
+    <div class="container">
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="text-uppercase text-left">Solicitud de Residencias</h5>
+                    <p class="text-left">Este documento es un formato oficial para solicitar residencias profesionales en el Instituto Tecnológico, que recopila datos del proyecto, la empresa y el estudiante participante.</p>
+                </div>
+                {{#if usuario}}
+                <div class="card-footer text-center d-grid gap-2">
+                    <a href="/forms" class="btn btn-primary" style="background-color: #233d7a;"> Formulario </a>
+                </div>
+                {{else}}
+                <div class="card-footer text-center d-grid gap-2">
+                    <a href="/login" class="btn btn-primary" style="background-color: #233d7a;"> Formulario </a>
+                </div>
+                {{/if}}
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="text-uppercase text-left">Asignacion de asesor</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer text-center d-grid gap-2">
+                    <a href="#" class="btn btn-primary disabled" style="background-color: #233d7a;"> Formulario </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="text-uppercase text-left">Carta de aceptacion y agradecimientos</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+                <div class="card-footer text-center d-grid gap-2">
+                    <a href="#" class="btn btn-primary disabled" style="background-color: #233d7a;"> Formulario </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

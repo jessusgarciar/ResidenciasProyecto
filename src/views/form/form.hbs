@@ -1,0 +1,92 @@
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h3>Formulario</h3>
+                <hr>
+                <form id="form" action="/formulario" method="post">
+                    <div class="row mb-3">
+                        <div class="mb-3">
+                            <label for="carreras" class="form-label"><b>Selecciona tu Carrera</b></label>
+                            <select class="form-select" id="carreras">
+                                <option value="">Seleccionar la carrera</option>
+                                {{#each carreras}}
+                                    <option value="{{id}}">{{nombre}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <label for="nombre_proyecto" class="form-label"><b>Nombre del Proyecto</b></label>
+                            <input type="text" class="form-control" id="nombre_proyecto"> 
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <label for="fecha_solicitud" class="form-label"><b>Fecha en la que se presenta la sollicitud</b></label>
+                            <input type="date" class="form-control" id="fecha_solicitud"> 
+                        </div>
+                        <br>
+                        <div class="mb-3">
+                            <br>
+                            <label for="opcion_elegida" class="form-label"><b>Opcion Elegida</b></label>
+                            <select class="form-select" id="opcion_elegida">
+                                <option value="opcion1">Banco de Proyectos</option>
+                                <option value="opcion2">Propuesta Propia</option>
+                                <option value="opcion3">Trabajador</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <br>
+                            <label for="periodo" class="form-label"><b>Periodo Proyectado</b></label>
+                            <select class="form-select" id="periodo">
+                                <option value="ene">Ene-Jun</option>
+                                <option value="ago">Ago-Dic</option>
+                            </select> 
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <br>
+                            <label for="anio" class="form-label"><b>Año de Periodo</b></label>
+                            <input type="year" class="form-control" id="anio"> 
+                        </div>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="numero_residentes" class="form-label"><b>Numero de Residentes</b></label>
+                        <select class="form-select" id="numero_residentes">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="empresa_id" class="form-label"><b>Empresa</b></label>
+                        <select class="form-select" id="empresa_id">
+                            <option value="">Selecciona una empresa</option>
+                            {{#each empresas}}
+                                <option value="{{id}}">{{nombre}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <br>
+                    <div class="col-md-6">
+                        <label for="nombre_asesor_externo" class="form-label"><b>Nombre del Asesor Externo</b><label>
+                        <input type="text" class="form-control" id="nombre_asesor_externo"> 
+                    </div>
+                    <br>
+                    <div class="col-md-6">
+                        <label for="nombre_asesor_externo" class="form-label"><b>Puesto del Asesor Externo</b></label>
+                        <input type="text" class="form-control" id="nombre_asesor_externo"> 
+                    </div>
+                    <br>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Descargar solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script src="js/app.js"></script>

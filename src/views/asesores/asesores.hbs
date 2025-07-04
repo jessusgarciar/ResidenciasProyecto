@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row mt-5">
+            <table class="table text-center table-bordered table-hover">
+                <div class="card-header">
+                    <h3 class="text-uppercase text-center p-2">Asesores</h3>
+                </div>
+                <thead>
+                    <tr class="table-primary">
+                        <th scope="col">RFC</th>
+                        <th scope="col">Nombre</th>                      
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each asesores}}
+                        <tr>
+                            <td>{{rfc}}</td>
+                            <td>{{nombre}}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

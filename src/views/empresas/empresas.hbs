@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row mt-5">
+        {{#if empresas}}
+                <table class="table text-center table-bordered table-hover">
+                    <div class="card-header">
+                        <h3 class="text-uppercase text-center p-2">Empresas</h3>
+                    </div>
+                    <thead>
+                        <tr class="table-primary">
+                            <th scope="col">Empresa</th>
+                            <th scope="col">Atencion A</th>
+                            <th scope="col">Giro</th>
+                            <th scope="col">Domicilio</th>
+                            <th scope="col">Colonia</th>
+                            <th scope="col">Ciudad</th>
+                            <th scope="col">Mision</th>
+                            <th scope="col">Codigo Postal</th>
+                            <th scope="col">Titular Nombre</th>
+                            <th scope="col">Titular Puesto</th>
+                            <th scope="col">Firmante Nombre</th>
+                            <th scope="col">Firmante Puesto</th>
+                            <th scope="col">Acciones</th>                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each empresas}}
+                            <tr>
+                                <td>{{nombre}}</td>
+                                <td>{{atencion_a}}</td>
+                                <td>{{giro_sector}}</td>
+                                <td>{{domicilio}}</td>
+                                <td>{{colonia}}</td>
+                                <td>{{ciudad}}</td>
+                                <td>{{mision}}</td>
+                                <td>{{codigo_postal}}</td>
+                                <td>{{titular_nombre}}</td>
+                                <td>{{titular_puesto}}</td>
+                                <td>{{firmante_nombre}}</td>
+                                <td>{{firmante_puesto}}</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="empresas/edit/{{id}}" class="btn btn-warning p-2"><i class="fa-solid fa-pen-to-square"></i></a>
+                                        <a href="empresas/delete/{{id}}" class="btn btn-danger p-2"><i class="fa-solid fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            {{else}}
+            <div class="card text-center mx-auto" style="width: 350px;">
+                <div class="card-header">
+                    <h3>Debes insertar una empresa</h3>
+                </div>
+                <div class="card-body">
+                    <p>Presiona el boton para registrar una persona</p>
+                    <a href="/empresas/insertar" class="btn btn-primary">Registrar Empresa</a>
+                </div>
+        {{/if}}
+        <div class="d-flex justify-content-center p-2">
+                <a href="/empresas/insertar" class="btn btn-primary">Registrar Empresa</a>
+        </div>
+    </div>
+</div>
